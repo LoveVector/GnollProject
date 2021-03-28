@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     public Camera playerCamera;
     public Rigidbody rb;
     CapsuleCollider feetCollider;
@@ -51,6 +53,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         rb = GetComponent<Rigidbody>();
         stepRayHigh = GameObject.Find("StepRayUpper");
         stepRayLow = GameObject.Find("StepRayLower");

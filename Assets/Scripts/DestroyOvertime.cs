@@ -8,6 +8,6 @@ public class DestroyOvertime : MonoBehaviour
 
     void Update() 
     {
-        Destroy(gameObject, lifetime);
+        Destroy(gameObject, lifetime * Time.deltaTime);
     }
 }
