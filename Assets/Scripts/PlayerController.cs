@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Camera playerCamera;
     public Rigidbody rb;
     CapsuleCollider feetCollider;
     BoxCollider bodyCollider;
-    Camera playerCamera;
 
     // Sliding Variables
 
@@ -49,8 +49,6 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveInput;
     private Vector2 mouseInput;
 
-    public Transform viewCam;
-
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -81,7 +79,7 @@ public class PlayerController : MonoBehaviour
         CheckIfGrounded();
         Jump();
         InputSlide();
-        Debug.Log(rb.velocity);
+        //Debug.Log(rb.velocity);
     }
 
     private void FixedUpdate()
@@ -128,7 +126,7 @@ public class PlayerController : MonoBehaviour
             transform.rotation.eulerAngles.y - -mouseInput.x, 
             transform.rotation.eulerAngles.z);
 
-        viewCam.localRotation = Quaternion.Euler(viewCam.localRotation.eulerAngles + new Vector3(-mouseInput.y, 0f, 0f));
+        playerCamera.transform.localRotation = Quaternion.Euler(playerCamera.transform.localRotation.eulerAngles + new Vector3(-mouseInput.y, 0f, 0f));
     }
 
     void CheckIfGrounded()
