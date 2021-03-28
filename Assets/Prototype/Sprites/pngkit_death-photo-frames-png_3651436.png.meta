@@ -1,0 +1,1500 @@
+fileFormatVersion: 2
+guid: 56504b2639330274f89af81d90a6a4d2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 600846730751016166
+    second: pngkit_death-photo-frames-png_3651436_0
+  - first:
+      213: 9159210057857714710
+    second: pngkit_death-photo-frames-png_3651436_1
+  - first:
+      213: 1823468485364039757
+    second: pngkit_death-photo-frames-png_3651436_2
+  - first:
+      213: 313227079942343847
+    second: pngkit_death-photo-frames-png_3651436_3
+  - first:
+      213: 8938280724696491920
+    second: pngkit_death-photo-frames-png_3651436_4
+  - first:
+      213: -4853260040460536379
+    second: pngkit_death-photo-frames-png_3651436_5
+  - first:
+      213: 126131467273497715
+    second: pngkit_death-photo-frames-png_3651436_6
+  - first:
+      213: 4162712081146718726
+    second: pngkit_death-photo-frames-png_3651436_7
+  - first:
+      213: -5302177548621846803
+    second: pngkit_death-photo-frames-png_3651436_8
+  - first:
+      213: 7707656734161310002
+    second: pngkit_death-photo-frames-png_3651436_9
+  - first:
+      213: 5590608017688797510
+    second: pngkit_death-photo-frames-png_3651436_10
+  - first:
+      213: 505084796845129146
+    second: pngkit_death-photo-frames-png_3651436_11
+  - first:
+      213: 4597893459251388443
+    second: pngkit_death-photo-frames-png_3651436_12
+  - first:
+      213: 4274668266744038251
+    second: pngkit_death-photo-frames-png_3651436_13
+  - first:
+      213: -956717562304274407
+    second: pngkit_death-photo-frames-png_3651436_14
+  - first:
+      213: -1403082379422174389
+    second: pngkit_death-photo-frames-png_3651436_15
+  - first:
+      213: -479610532700328573
+    second: pngkit_death-photo-frames-png_3651436_16
+  - first:
+      213: -3952340810079408314
+    second: pngkit_death-photo-frames-png_3651436_17
+  - first:
+      213: -6845626554600803980
+    second: pngkit_death-photo-frames-png_3651436_18
+  - first:
+      213: 1075177756062119917
+    second: pngkit_death-photo-frames-png_3651436_19
+  - first:
+      213: -7540478797818491022
+    second: pngkit_death-photo-frames-png_3651436_20
+  - first:
+      213: 1292068672793544267
+    second: pngkit_death-photo-frames-png_3651436_21
+  - first:
+      213: 3768728276453489561
+    second: pngkit_death-photo-frames-png_3651436_22
+  - first:
+      213: 1637572572301897855
+    second: pngkit_death-photo-frames-png_3651436_23
+  - first:
+      213: 3902105992057577173
+    second: pngkit_death-photo-frames-png_3651436_24
+  - first:
+      213: -7014948212251983835
+    second: pngkit_death-photo-frames-png_3651436_25
+  - first:
+      213: -6605283116656298371
+    second: pngkit_death-photo-frames-png_3651436_26
+  - first:
+      213: 8765427952849064646
+    second: pngkit_death-photo-frames-png_3651436_27
+  - first:
+      213: 2400244258410454998
+    second: pngkit_death-photo-frames-png_3651436_28
+  - first:
+      213: -7899892639648267899
+    second: pngkit_death-photo-frames-png_3651436_29
+  - first:
+      213: -2462871260145006244
+    second: pngkit_death-photo-frames-png_3651436_30
+  - first:
+      213: 6083614608401370543
+    second: pngkit_death-photo-frames-png_3651436_31
+  - first:
+      213: 6647905282371732489
+    second: pngkit_death-photo-frames-png_3651436_32
+  - first:
+      213: 8993861505713431570
+    second: pngkit_death-photo-frames-png_3651436_33
+  - first:
+      213: 6139012367425775192
+    second: pngkit_death-photo-frames-png_3651436_34
+  - first:
+      213: 7402242962218005025
+    second: pngkit_death-photo-frames-png_3651436_35
+  - first:
+      213: -3209943071688075078
+    second: pngkit_death-photo-frames-png_3651436_36
+  - first:
+      213: 2576185736499874508
+    second: pngkit_death-photo-frames-png_3651436_37
+  - first:
+      213: 6390817046067106258
+    second: pngkit_death-photo-frames-png_3651436_38
+  - first:
+      213: -1531457759528448697
+    second: pngkit_death-photo-frames-png_3651436_39
+  - first:
+      213: 4347365052186768524
+    second: pngkit_death-photo-frames-png_3651436_40
+  - first:
+      213: -2239141357219224538
+    second: pngkit_death-photo-frames-png_3651436_41
+  - first:
+      213: -1373059645363938951
+    second: pngkit_death-photo-frames-png_3651436_42
+  - first:
+      213: 1960300779158812411
+    second: pngkit_death-photo-frames-png_3651436_43
+  - first:
+      213: -4064844894607031371
+    second: pngkit_death-photo-frames-png_3651436_44
+  - first:
+      213: -6103545538541694241
+    second: pngkit_death-photo-frames-png_3651436_45
+  - first:
+      213: 829440418893964940
+    second: pngkit_death-photo-frames-png_3651436_46
+  - first:
+      213: 4754418134184820016
+    second: pngkit_death-photo-frames-png_3651436_47
+  - first:
+      213: -3538200355829961105
+    second: pngkit_death-photo-frames-png_3651436_48
+  - first:
+      213: 200608126828839890
+    second: pngkit_death-photo-frames-png_3651436_49
+  - first:
+      213: -5325946031470431486
+    second: pngkit_death-photo-frames-png_3651436_50
+  - first:
+      213: 217789611140187586
+    second: pngkit_death-photo-frames-png_3651436_51
+  - first:
+      213: 514941643495061935
+    second: pngkit_death-photo-frames-png_3651436_52
+  - first:
+      213: 6883031653665582439
+    second: pngkit_death-photo-frames-png_3651436_53
+  - first:
+      213: 3575741671186588575
+    second: pngkit_death-photo-frames-png_3651436_55
+  - first:
+      213: 7065008040629677222
+    second: pngkit_death-photo-frames-png_3651436_56
+  - first:
+      213: -981946203921430585
+    second: pngkit_death-photo-frames-png_3651436_57
+  - first:
+      213: -1802298656641590862
+    second: pngkit_death-photo-frames-png_3651436_58
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 413
+        width: 41
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ec7ede0be2a65800800000000000000
+      internalID: 600846730751016166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 413
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a4bc1250d0c1f70800000000000000
+      internalID: 9159210057857714710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_2
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 413
+        width: 39
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d404e312de24e4910800000000000000
+      internalID: 1823468485364039757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_3
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 413
+        width: 37
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac0ff1ae5ec85400800000000000000
+      internalID: 313227079942343847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_4
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 413
+        width: 49
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 097614a46f62b0c70800000000000000
+      internalID: 8938280724696491920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_5
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 413
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c570c5f4b1c5acb0800000000000000
+      internalID: -4853260040460536379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_6
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 413
+        width: 32
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ce5d5b6eb10c100800000000000000
+      internalID: 126131467273497715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_7
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 352
+        width: 40
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a2af2359ce4c930800000000000000
+      internalID: 4162712081146718726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_8
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 352
+        width: 38
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6e7569c91ea66b0800000000000000
+      internalID: -5302177548621846803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_9
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 352
+        width: 41
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231155a76f817fa60800000000000000
+      internalID: 7707656734161310002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_10
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 352
+        width: 45
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641aacc2f54d59d40800000000000000
+      internalID: 5590608017688797510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_11
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 352
+        width: 32
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd776952fb620700800000000000000
+      internalID: 505084796845129146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_12
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 352
+        width: 45
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1065c19dbffecf30800000000000000
+      internalID: 4597893459251388443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_13
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 352
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63c9e3f32ca25b30800000000000000
+      internalID: 4274668266744038251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_14
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 296
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 910e97c227e09b2f0800000000000000
+      internalID: -956717562304274407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_15
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 296
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b437eef7200478ce0800000000000000
+      internalID: -1403082379422174389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_16
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 296
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d6cd7f2c41859f0800000000000000
+      internalID: -479610532700328573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_17
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 296
+        width: 39
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fefef39f67629c0800000000000000
+      internalID: -3952340810079408314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_18
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 296
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471b9041be27ff0a0800000000000000
+      internalID: -6845626554600803980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_19
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 296
+        width: 42
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7fb7cf87ccbee00800000000000000
+      internalID: 1075177756062119917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_20
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 296
+        width: 59
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f0aab0c76da5790800000000000000
+      internalID: -7540478797818491022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_21
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 242
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46054bbc995ee110800000000000000
+      internalID: 1292068672793544267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_22
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 242
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99bfafc56663d4430800000000000000
+      internalID: 3768728276453489561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_23
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 242
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f703af90493d9b610800000000000000
+      internalID: 1637572572301897855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_24
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 242
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ded38cb9b0172630800000000000000
+      internalID: 3902105992057577173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_25
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 242
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52085fa84c5e5ae90800000000000000
+      internalID: -7014948212251983835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_26
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 242
+        width: 36
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d76f0de60025554a0800000000000000
+      internalID: -6605283116656298371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_27
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 242
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c219d9284e05a970800000000000000
+      internalID: 8765427952849064646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_28
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 190
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dfd9bc9f616f4120800000000000000
+      internalID: 2400244258410454998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_29
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 190
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 581ca0aef71fd5290800000000000000
+      internalID: -7899892639648267899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_30
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 190
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59c98343af12ddd0800000000000000
+      internalID: -2462871260145006244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_31
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 190
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad042401475d6450800000000000000
+      internalID: 6083614608401370543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_32
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 190
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904c538d1aa124c50800000000000000
+      internalID: 6647905282371732489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_33
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 190
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 214eb1f436d90dc70800000000000000
+      internalID: 8993861505713431570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_34
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 190
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856a428e837223550800000000000000
+      internalID: 6139012367425775192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_35
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 129
+        width: 41
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122b32061cc0ab660800000000000000
+      internalID: 7402242962218005025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_36
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 129
+        width: 31
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab85ec688cdf373d0800000000000000
+      internalID: -3209943071688075078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_37
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 129
+        width: 34
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccac083374370c320800000000000000
+      internalID: 2576185736499874508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_38
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 129
+        width: 34
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d1575f4e3eb0b850800000000000000
+      internalID: 6390817046067106258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_39
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 129
+        width: 39
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d8ace184b2fbae0800000000000000
+      internalID: -1531457759528448697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 64
+        width: 42
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c843a8c4b71f45c30800000000000000
+      internalID: 4347365052186768524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_41
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 64
+        width: 41
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 624ef019cc8fce0e0800000000000000
+      internalID: -2239141357219224538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_42
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 64
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97998aef689e1fce0800000000000000
+      internalID: -1373059645363938951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_43
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 63
+        width: 50
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6beaa2c23643b10800000000000000
+      internalID: 1960300779158812411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_44
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 67
+        width: 58
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b343e5da15c697c0800000000000000
+      internalID: -4064844894607031371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_45
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 64
+        width: 42
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd25dc0bba9db4ba0800000000000000
+      internalID: -6103545538541694241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_46
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 64
+        width: 37
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86a68a9aa3c28b00800000000000000
+      internalID: 829440418893964940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_47
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 64
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03df2c16a161bf140800000000000000
+      internalID: 4754418134184820016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_48
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 64
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e2896c589c5eec0800000000000000
+      internalID: -3538200355829961105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_49
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 64
+        width: 41
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d380ba4704b8c200800000000000000
+      internalID: 200608126828839890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_50
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 46
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203bd4d6d407616b0800000000000000
+      internalID: -5325946031470431486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_51
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 49
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c508c75f7eb50300800000000000000
+      internalID: 217789611140187586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_52
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 0
+        width: 55
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9349c42b0752700800000000000000
+      internalID: 514941643495061935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_53
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 0
+        width: 58
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76da18632d0758f50800000000000000
+      internalID: 6883031653665582439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_55
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 0
+        width: 57
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9363a7da169f9130800000000000000
+      internalID: 3575741671186588575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_56
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 0
+        width: 57
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aca2058163fb0260800000000000000
+      internalID: 7065008040629677222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_57
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1
+        width: 56
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c748be412d6f52f0800000000000000
+      internalID: -981946203921430585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pngkit_death-photo-frames-png_3651436_58
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1
+        width: 56
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9d6b7bbe2fcf6e0800000000000000
+      internalID: -1802298656641590862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3259930d0c951434b98f54ce9fce52d5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
