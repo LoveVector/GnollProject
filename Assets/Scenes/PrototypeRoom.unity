@@ -1287,8 +1287,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunAnim: {fileID: 2144819837}
   bulletImpact: {fileID: 8377981015785097955, guid: b42fa34c05db37140a9ebeeb03c73211, type: 3}
+  damage: 20
+  currentAmmo: 90
+  maxAmmo: 100
+  bulletsShot: 5
+  bulletsPerTap: 6
   fireRate: 2
-  currentAmmo: 50
+  spread: 0.1
+  range: 100
+  allowButtonHold: 0
+  isEnemy:
+    serializedVersion: 2
+    m_Bits: 0
   fireRateTime: 0
 --- !u!1 &906012360
 GameObject:
@@ -2868,15 +2878,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6645273102382902349, guid: 63aa0d4684e907b40a2331f20647c47e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -61.98
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6645273102382902349, guid: 63aa0d4684e907b40a2331f20647c47e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.11
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6645273102382902349, guid: 63aa0d4684e907b40a2331f20647c47e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6645273102382902349, guid: 63aa0d4684e907b40a2331f20647c47e, type: 3}
       propertyPath: m_LocalRotation.w
