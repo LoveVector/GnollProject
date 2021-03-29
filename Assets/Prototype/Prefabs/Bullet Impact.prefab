@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2190091026029020242}
   - component: {fileID: 6933825065507626716}
   - component: {fileID: 4951136898345368982}
-  - component: {fileID: 4163815268985847794}
   m_Layer: 0
   m_Name: Bullet Impact
   m_TagString: Untagged
@@ -116,16 +115,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04301975158a73848adb493211aad1d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 0.5
---- !u!114 &4163815268985847794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8377981015785097955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 516255fdebc63de4bbf232e78357c982, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  lifetime: 0.8
