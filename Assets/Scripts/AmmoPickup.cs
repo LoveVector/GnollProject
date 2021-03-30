@@ -9,7 +9,7 @@ public class AmmoPickup : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        shootingSc = other.GetComponent<Shooting>();
+        shootingSc = other.GetComponentInChildren<Shooting>();
         if(other.tag == "Player")
         {
             shootingSc.currentAmmo += ammoAmount;
