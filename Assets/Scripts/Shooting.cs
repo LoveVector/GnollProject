@@ -11,7 +11,6 @@ public class Shooting : MonoBehaviour
     public int currentAmmo = 50;
     public int maxAmmo;
     public int bulletsShot;
-    public int bulletsPerTap;
 
     public float fireRate;
     public float spread;
@@ -30,7 +29,8 @@ public class Shooting : MonoBehaviour
 
     void Start()
     {
-        player = GetComponent<PlayerController>();
+        player = GetComponentInParent<PlayerController>();
+        gunAnim = GetComponent<Animator>();
     }
 
     void Update()
