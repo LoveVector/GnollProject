@@ -73,11 +73,12 @@ public class Shooting : MonoBehaviour
 
                     if (Physics.Raycast(player.playerCamera.transform.position, direction, out hit, range))
                     {
-
                         Instantiate(bulletImpact, hit.point, Quaternion.identity);
-                        Debug.Log("I Shot something");
+                        if (hit.transform.tag == "Enemy")
+                        {
+                            hit.transform.gameObject.GetComponent<EnemyMeleeAI>().TakeDamage(damage);
+                        }
                         //bug.Log("I'm looking at " + hit.transform.name);
-                        //Look for enemy script and damage him
                     }
                     else
                     {

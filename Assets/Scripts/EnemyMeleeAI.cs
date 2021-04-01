@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class EnemyMeleeAI : MonoBehaviour
 {
+    public static EnemyMeleeAI instance;
+
     public NavMeshAgent agent;
 
     public Transform player;
@@ -29,6 +31,7 @@ public class EnemyMeleeAI : MonoBehaviour
 
     void Awake()
     {
+        instance = this;
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
     }
@@ -110,7 +113,7 @@ public class EnemyMeleeAI : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
 

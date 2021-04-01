@@ -26,14 +26,18 @@ public class PlayerController : MonoBehaviour
     public float slideVSlowDownTime = 1;
     public float slideDrag;
     public float slideAngularDrag;
+    public float alreadySlidModifier = 2;
     public float fallSpeedThreshold = -7;
     public float fallingMass = 3;
+    public float slideUnlocked = 1;
 
     [SerializeField] bool isGrounded;
     [SerializeField] bool isOnWall;
+    [SerializeField] bool alreadySlid;
 
     [SerializeField]GameObject stepRayHigh;
     [SerializeField]GameObject stepRayLow;
+
     [SerializeField]float stepHeight = 0.3f; // How high we want the character to climb when he steps
     [SerializeField]float stepSmooth = 0.1f;
     [SerializeField]float originalMass;
@@ -42,6 +46,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]float originalFeetHeight;
     [SerializeField]float stepRayLowDistance = 0.1f;
     [SerializeField]float stepRayHighDistance = 0.2f;
+    [SerializeField]float alreadySlidTime;
+
     [SerializeField]Vector3 originalBodyHeight;
     [SerializeField]Vector3 originalCameraHeight;
 
@@ -168,8 +174,19 @@ public class PlayerController : MonoBehaviour
 
     void InputSlide()
     {
+        if (alreadySlid == true)
+        {
+            alreadySlidTime += Time.deltaTime;
+        }
+        if(alreadySlidTime >= slideUnlocked)
+        {
+            alreadySlid = false;
+            alreadySlidTime = 0;
+        }
         if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
             Sliding();
+        }
         else if (Input.GetKey(KeyCode.LeftControl))
         {
             slideTime += Time.deltaTime;
@@ -186,10 +203,22 @@ public class PlayerController : MonoBehaviour
 
     void Sliding()
     {
+
         playerCamera.transform.localPosition = Vector3.up * cameraReducedHeight;
         feetCollider.height = feetReducedHeight;
         bodyCollider.size = bodyReducedSize;
-        rb.AddForce(transform.forward * slideSpeed, ForceMode.VelocityChange);
+        if (alreadySlid == true)
+        {
+            Debug.Log("SlideMod working");
+            rb.AddForce(transform.forward * alreadySlidModifier, ForceMode.VelocityChange);
+        }
+        else
+        {
+            Debug.Log("NoSlideMod");
+            rb.AddForce(transform.forward * slideSpeed, ForceMode.VelocityChange);
+        }
+
+        alreadySlid = true;
     }
 
     void GoUp()
