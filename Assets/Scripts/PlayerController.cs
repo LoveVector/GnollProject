@@ -7,13 +7,9 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
 
     public Camera playerCamera;
+
     public Rigidbody rb;
-    CapsuleCollider feetCollider;
-    BoxCollider bodyCollider;
 
-    // Sliding Variables
-
-    public Vector3 bodyReducedSize;
     public float cameraReducedHeight;
     public float feetReducedHeight;
     public float moveSpeed = 1f; 
@@ -31,6 +27,8 @@ public class PlayerController : MonoBehaviour
     public float fallingMass = 3;
     public float slideUnlocked = 1;
 
+    public Vector3 bodyReducedSize;
+
     [SerializeField] bool isGrounded;
     [SerializeField] bool isOnWall;
     [SerializeField] bool alreadySlid;
@@ -47,31 +45,40 @@ public class PlayerController : MonoBehaviour
     [SerializeField]float stepRayLowDistance = 0.1f;
     [SerializeField]float stepRayHighDistance = 0.2f;
     [SerializeField]float alreadySlidTime;
+    [SerializeField]float slideTime;
+
+    private float jumpVelocity;
+
+    CapsuleCollider feetCollider;
+    BoxCollider bodyCollider;
 
     [SerializeField]Vector3 originalBodyHeight;
     [SerializeField]Vector3 originalCameraHeight;
 
-    private float jumpVelocity;
-    [SerializeField]private float slideTime;
-    private Vector3 lastVelocity;
-    private Vector3 moveInput;
-    private Vector2 mouseInput;
+    Vector3 lastVelocity;
+    Vector3 moveInput;
+    Vector2 mouseInput;
 
     private void Awake()
     {
-        instance = this;
+        instance = this;                                    // Singleton
+
         rb = GetComponent<Rigidbody>();
+
         stepRayHigh = GameObject.Find("StepRayUpper");
         stepRayLow = GameObject.Find("StepRayLower");
+
         playerCamera = GetComponentInChildren<Camera>();
         feetCollider = GetComponent<CapsuleCollider>();
         bodyCollider = GetComponentInChildren<BoxCollider>();
 
         stepRayHigh.transform.position = new Vector3(stepRayHigh.transform.position.x, stepHeight, stepRayHigh.transform.position.z); 
     }
-    // Start is called before the first frame update
+
+
     void Start()
     {
+        // -------------------------------- Gaining Original Variables -----------------------
         originalMass = rb.mass;
         originalAngularDrag = rb.angularDrag;
         originalDrag = rb.drag;
@@ -80,7 +87,6 @@ public class PlayerController : MonoBehaviour
         originalBodyHeight = bodyCollider.size;
     }
 
-    // Update is called once per frame
     void Update()
     {
         lastVelocity = rb.velocity;
@@ -183,14 +189,14 @@ public class PlayerController : MonoBehaviour
             alreadySlid = false;
             alreadySlidTime = 0;
         }
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKeyDown(KeyCode.LeftControl) && isGrounded)
         {
             Sliding();
         }
         else if (Input.GetKey(KeyCode.LeftControl))
         {
             slideTime += Time.deltaTime;
-            if (slideTime >= slideVSlowDownTime)
+            if (slideTime >= slideVSlowDownTime )
             {
                 Debug.Log("Dragging");
                 rb.drag = slideDrag;
@@ -287,8 +293,6 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = direction * Mathf.Max(speed, wallJumpStrength);
                 Debug.Log("Wall Jumped");
             }
-
         }
-
     }
 }

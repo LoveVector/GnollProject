@@ -11,6 +11,7 @@ public class Shooting : MonoBehaviour
     public int currentAmmo = 50;
     public int maxAmmo;
     public int bulletsShot;
+    public int headshotMultiplier = 2;
 
     public float fireRate;
     public float spread;
@@ -77,6 +78,11 @@ public class Shooting : MonoBehaviour
                         if (hit.transform.tag == "Enemy")
                         {
                             hit.transform.gameObject.GetComponent<EnemyMeleeAI>().TakeDamage(damage);
+                        }
+                        else if(hit.transform.tag == "EnemyHead")
+                        {
+                            Debug.Log("Headshot");
+                            hit.transform.gameObject.GetComponentInParent<EnemyMeleeAI>().TakeDamage(damage * headshotMultiplier);
                         }
                         //bug.Log("I'm looking at " + hit.transform.name);
                     }
