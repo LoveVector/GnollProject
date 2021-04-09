@@ -9,10 +9,10 @@ public class PlayerDash : MonoBehaviour
     public float dashSpeed;
     public float dashCooldown;
     public float timeForNextDash;
+    public int dashAttempts;
     public int totalDash;
 
     [SerializeField]float timeLeftCooldown;
-    [SerializeField]int dashAttempts;
     [SerializeField]float dashStartTime;
 
     PlayerController playerController;
@@ -92,5 +92,4 @@ public class PlayerDash : MonoBehaviour
             }
         }
     }
-
 }

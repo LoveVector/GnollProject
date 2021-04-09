@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -27,6 +28,9 @@ public class PlayerController : MonoBehaviour
     public float fallingMass = 3;
     public float slideUnlocked = 1;
 
+    public int currentHealth;
+    public int maxHealth = 100;
+
     public Vector3 bodyReducedSize;
 
     [SerializeField] bool isGrounded;
@@ -44,6 +48,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]float originalFeetHeight;
     [SerializeField]float stepRayLowDistance = 0.1f;
     [SerializeField]float stepRayHighDistance = 0.2f;
+    [SerializeField]float slopeLength = 20f;
     [SerializeField]float alreadySlidTime;
     [SerializeField]float slideTime;
 
@@ -56,12 +61,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField]Vector3 originalCameraHeight;
 
     Vector3 lastVelocity;
+    Vector3 slopeMoveDirection;
     Vector3 moveInput;
     Vector2 mouseInput;
+
+    RaycastHit slopeHit;
+
+    // ---------------------------- UI -----------------------------
 
     private void Awake()
     {
         instance = this;                                    // Singleton
+        currentHealth = maxHealth;
 
         rb = GetComponent<Rigidbody>();
 
@@ -78,6 +89,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        Cursor.visible = false;
+
         // -------------------------------- Gaining Original Variables -----------------------
         originalMass = rb.mass;
         originalAngularDrag = rb.angularDrag;
@@ -85,6 +98,9 @@ public class PlayerController : MonoBehaviour
         originalCameraHeight = playerCamera.transform.localPosition;
         originalFeetHeight = feetCollider.height;
         originalBodyHeight = bodyCollider.size;
+
+        // ---------------------------------- Health --------------------------
+
     }
 
     void Update()
@@ -100,7 +116,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Movement();
-        StepClimb();
+        //StepClimb();
     }
 
     void MovementVelocity()
@@ -129,8 +145,26 @@ public class PlayerController : MonoBehaviour
         {
             horizontalMovement = horizontalMovement.normalized * maxSpeed;
         }
+
+        Debug.Log(slopeHit.normal);
+
         rb.velocity = new Vector3(horizontalMovement.x, rb.velocity.y, horizontalMovement.y);
-        rb.AddRelativeForce(Input.GetAxis("Horizontal") * moveSpeed, 0, Input.GetAxis("Vertical") * moveSpeed);
+
+        if (!OnSlope())
+        {
+            rb.AddRelativeForce(Input.GetAxis("Horizontal") * moveSpeed, 0, Input.GetAxis("Vertical") * moveSpeed);
+        }
+        else if (isGrounded && OnSlope())
+        {
+            Debug.Log("Is on a slope");
+            float horizontal = Input.GetAxis("Horizontal");
+            float vertical = Input.GetAxis("Vertical");
+
+            Vector3 moveDirection = new Vector3(horizontal, rb.velocity.y, vertical);
+
+            slopeMoveDirection = Vector3.ProjectOnPlane(moveDirection, slopeHit.normal);
+            rb.AddRelativeForce(slopeMoveDirection.x * moveSpeed, slopeMoveDirection.y * moveSpeed, slopeMoveDirection.z * moveSpeed * 2);
+        }
     }
 
     void MouseAim()
@@ -280,8 +314,30 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private bool OnSlope()
+    {
+        if (Physics.Raycast(transform.position, Vector3.down, out slopeHit, slopeLength))
+        {
+            if (slopeHit.normal != Vector3.up)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        return false;
+    }
+
+    void ClimbSlope()
+    {
+
+    }
+
     private void OnCollisionEnter(Collision hit)
     {
+        // Wall Jump
         if (hit.gameObject.tag == "Wall")
         {
             Debug.Log("You hit a Wall");
