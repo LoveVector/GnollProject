@@ -149,22 +149,21 @@ public class PlayerController : MonoBehaviour
         Debug.Log(slopeHit.normal);
 
         rb.velocity = new Vector3(horizontalMovement.x, rb.velocity.y, horizontalMovement.y);
+        Vector3 speedMovement = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, 0, Input.GetAxis("Vertical") * moveSpeed);
 
         if (!OnSlope())
         {
-            rb.AddRelativeForce(Input.GetAxis("Horizontal") * moveSpeed, 0, Input.GetAxis("Vertical") * moveSpeed);
+            speedMovement = transform.TransformDirection(speedMovement);
+            rb.AddForce(speedMovement);
         }
         else if (isGrounded && OnSlope())
         {
-            Debug.Log("Is on a slope");
-            float horizontal = Input.GetAxis("Horizontal");
-            float vertical = Input.GetAxis("Vertical");
-
-            Vector3 moveDirection = new Vector3(horizontal, rb.velocity.y, vertical);
-
-            slopeMoveDirection = Vector3.ProjectOnPlane(moveDirection, slopeHit.normal);
-            rb.AddRelativeForce(slopeMoveDirection.x * moveSpeed, slopeMoveDirection.y * moveSpeed, slopeMoveDirection.z * moveSpeed * 2);
+            speedMovement = transform.TransformDirection(speedMovement);
+            speedMovement = Vector3.ProjectOnPlane(speedMovement, -slopeHit.normal);
+            speedMovement = speedMovement.normalized * (moveSpeed * 1.2f);
+            rb.AddForce(speedMovement);
         }
+        Debug.DrawRay(transform.position, speedMovement);
     }
 
     void MouseAim()
@@ -328,11 +327,6 @@ public class PlayerController : MonoBehaviour
             }
         }
         return false;
-    }
-
-    void ClimbSlope()
-    {
-
     }
 
     private void OnCollisionEnter(Collision hit)
