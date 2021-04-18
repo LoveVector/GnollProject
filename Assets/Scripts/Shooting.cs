@@ -77,12 +77,12 @@ public class Shooting : MonoBehaviour
                         Instantiate(bulletImpact, hit.point, Quaternion.identity);
                         if (hit.transform.tag == "Enemy")
                         {
-                            hit.transform.gameObject.GetComponent<EnemyMeleeAI>().TakeDamage(damage);
+                            hit.transform.gameObject.GetComponent<EnemyMeleeAI>().TakeDamageEnemy(damage);
                         }
                         else if(hit.transform.tag == "EnemyHead")
                         {
                             Debug.Log("Headshot");
-                            hit.transform.gameObject.GetComponentInParent<EnemyMeleeAI>().TakeDamage(damage * headshotMultiplier);
+                            hit.transform.gameObject.GetComponentInParent<EnemyMeleeAI>().TakeDamageEnemy(damage * headshotMultiplier);
                         }
                         //bug.Log("I'm looking at " + hit.transform.name);
                     }

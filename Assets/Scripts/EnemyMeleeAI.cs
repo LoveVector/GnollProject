@@ -101,6 +101,7 @@ public class EnemyMeleeAI : MonoBehaviour
 
         if (!alreadyAttacked)
         {
+            // Play Animation ( animation frame add damage )
             // Attacking
             Debug.Log("Attacked");
             alreadyAttacked = true;
@@ -113,7 +114,7 @@ public class EnemyMeleeAI : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamageEnemy(int damage)
     {
         health -= damage;
 

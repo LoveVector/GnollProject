@@ -7,6 +7,10 @@ public class ReceiveUIAmmo : MonoBehaviour
 {
     Shooting shootAmmo;
     Text ammoText;
+    int shotgunAmmoValue;
+
+    public bool isShotgun;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +21,12 @@ public class ReceiveUIAmmo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isShotgun)
+        {
+            shotgunAmmoValue = shootAmmo.currentAmmo / shootAmmo.bulletsShot;
+            ammoText.text = shotgunAmmoValue.ToString();
+        }
+        else
         ammoText.text = shootAmmo.currentAmmo.ToString();
     }
 }

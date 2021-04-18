@@ -27,38 +27,40 @@ public class PlayerController : MonoBehaviour
     public float fallSpeedThreshold = -7;
     public float fallingMass = 3;
     public float slideUnlocked = 1;
+    public float cameraTilt = 1;
 
     public int currentHealth;
     public int maxHealth = 100;
 
     public Vector3 bodyReducedSize;
 
-    [SerializeField] bool isGrounded;
-    [SerializeField] bool isOnWall;
-    [SerializeField] bool alreadySlid;
+    bool isGrounded;
+    bool isOnWall;
+    bool alreadySlid;
 
-    [SerializeField]GameObject stepRayHigh;
-    [SerializeField]GameObject stepRayLow;
+    GameObject stepRayHigh;
+    GameObject stepRayLow;
+    [SerializeField]GameObject speedlines;
 
-    [SerializeField]float stepHeight = 0.3f; // How high we want the character to climb when he steps
-    [SerializeField]float stepSmooth = 0.1f;
-    [SerializeField]float originalMass;
-    [SerializeField]float originalAngularDrag;
-    [SerializeField]float originalDrag;
-    [SerializeField]float originalFeetHeight;
-    [SerializeField]float stepRayLowDistance = 0.1f;
-    [SerializeField]float stepRayHighDistance = 0.2f;
-    [SerializeField]float slopeLength = 20f;
-    [SerializeField]float alreadySlidTime;
-    [SerializeField]float slideTime;
+    float stepHeight = 0.3f; // How high we want the character to climb when he steps
+    float stepSmooth = 0.1f;
+    float originalMass;
+    float originalAngularDrag;
+    float originalDrag;
+    float originalFeetHeight;
+    float stepRayLowDistance = 0.1f;
+    float stepRayHighDistance = 0.2f;
+    float slopeLength = 20f;
+    float alreadySlidTime;
+    float slideTime;
 
     private float jumpVelocity;
 
     CapsuleCollider feetCollider;
     BoxCollider bodyCollider;
 
-    [SerializeField]Vector3 originalBodyHeight;
-    [SerializeField]Vector3 originalCameraHeight;
+    Vector3 originalBodyHeight;
+    Vector3 originalCameraHeight;
 
     Vector3 lastVelocity;
     Vector3 slopeMoveDirection;
@@ -90,7 +92,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;
-
+        speedlines = GameObject.Find("SpeedLines");
+        speedlines.SetActive(false);
         // -------------------------------- Gaining Original Variables -----------------------
         originalMass = rb.mass;
         originalAngularDrag = rb.angularDrag;
@@ -110,6 +113,8 @@ public class PlayerController : MonoBehaviour
         CheckIfGrounded();
         Jump();
         InputSlide();
+        StepClimb();
+        CameraMoveTilt();
         //Debug.Log(rb.velocity);
     }
 
@@ -117,25 +122,6 @@ public class PlayerController : MonoBehaviour
     {
         Movement();
         //StepClimb();
-    }
-
-    void MovementVelocity()
-    {
-        moveInput = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
-
-        Vector3 moveHorizontal = transform.forward * moveInput.z;
-        Vector3 moveVertical = transform.right * moveInput.x;
-        //Vector3 moveUp = transform.up * jumpForce;
-
-        rb.velocity = (moveHorizontal + moveVertical) * moveSpeed;
-    }
-
-    void MovementRigidbody()
-    {
-        moveInput = new Vector3(Input.GetAxis("Horizontal"), 0.0f, Input.GetAxis("Vertical"));
-
-        rb.AddForce(transform.forward * moveInput.z * moveSpeed, ForceMode.Acceleration);
-        rb.AddForce(transform.right * moveInput.x * moveSpeed, ForceMode.Acceleration);
     }
 
     void Movement()
@@ -193,6 +179,29 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void CameraMoveTilt()
+    {
+        //Left
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            playerCamera.transform.Rotate(new Vector3(0, 0, cameraTilt));
+        }
+        else if (Input.GetKeyUp(KeyCode.A))
+        {
+            playerCamera.transform.Rotate(new Vector3(0, 0, -cameraTilt));
+        }
+
+        // Right
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            playerCamera.transform.Rotate(0, 0, -cameraTilt);
+        }
+        else if (Input.GetKeyUp(KeyCode.D))
+        {
+            playerCamera.transform.Rotate(0, 0, cameraTilt);
+        }
+    }
+
     void Jump()
     {
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -225,6 +234,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftControl) && isGrounded)
         {
             Sliding();
+            speedlines.SetActive(true);
         }
         else if (Input.GetKey(KeyCode.LeftControl))
         {
@@ -237,7 +247,10 @@ public class PlayerController : MonoBehaviour
             }
         }
         else if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            speedlines.gameObject.SetActive(false);
             GoUp();
+        }
     }
 
     void Sliding()
@@ -344,5 +357,15 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Wall Jumped");
             }
         }
+    }
+
+    public void TakeDamagePlayer(int damage)
+    {
+        currentHealth -= damage;
+    }
+
+    void Die()
+    {
+        // Die Function
     }
 }
