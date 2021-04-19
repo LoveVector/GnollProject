@@ -7,33 +7,48 @@ public class EnemyMeleeAI : MonoBehaviour
 {
     public static EnemyMeleeAI instance;
 
+    PlayerController player;
+
+    Collider enemyColl;
+
+    Transform headshotBox;
+
+    public Animator enemyAnim;
+
     public NavMeshAgent agent;
 
-    public Transform player;
+    public Transform playerTransform;
 
     public LayerMask isPlayer;
     public LayerMask isGround;
 
     public Vector3 walkPoint;
-    bool walkPointSet;
+
+    public int attackDamageMin;
+    public int attackDamageMax;
+
     public float walkPointRange;
-
     public float timeBetweenAttacks;
-    bool alreadyAttacked;
-
     public float sightRange;
     public float attackRange;
+    public float health;
 
     public bool playerInSightRange;
     public bool playerInAttackRange;
 
-    public float health;
+    int attackDamageValue;
+
+    bool alreadyAttacked;
+    bool walkPointSet;
 
     void Awake()
     {
         instance = this;
-        player = GameObject.Find("Player").transform;
-        agent = GetComponent<NavMeshAgent>();
+        enemyColl = GetComponent<Collider>();
+        playerTransform = GameObject.Find("Player").transform;
+        enemyAnim = GetComponent<Animator>();
+        player = FindObjectOfType<PlayerController>();
+        headshotBox = transform.Find("Headshot");
     }
 
     void Update()
@@ -65,6 +80,8 @@ public class EnemyMeleeAI : MonoBehaviour
         }
         if (walkPointSet)
         {
+            enemyAnim.SetBool("isWalking", true);
+            enemyAnim.SetBool("isAttacking", false);
             agent.SetDestination(walkPoint);
         }
 
@@ -92,7 +109,9 @@ public class EnemyMeleeAI : MonoBehaviour
     void ChasePlayer()
     {
         Debug.Log("On the way to Player");
-        agent.SetDestination(player.position);
+        enemyAnim.SetBool("isWalking", true);
+        enemyAnim.SetBool("isAttacking", false);
+        agent.SetDestination(playerTransform.position);
     }
 
     void AttackPlayer()
@@ -102,11 +121,18 @@ public class EnemyMeleeAI : MonoBehaviour
         if (!alreadyAttacked)
         {
             // Play Animation ( animation frame add damage )
+            enemyAnim.SetBool("isAttacking", true);
             // Attacking
             Debug.Log("Attacked");
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
+    }
+
+    void DamagePlayer()
+    {
+        attackDamageValue = Random.Range(attackDamageMin, attackDamageMax);
+        player.TakeDamagePlayer(attackDamageValue);
     }
 
     void ResetAttack()
@@ -120,13 +146,18 @@ public class EnemyMeleeAI : MonoBehaviour
 
         if (health <= 0)
         {
-            Invoke(nameof(DestroyEnemy), .5f);
+            enemyAnim.SetTrigger("isDead");
         }
     }
 
     void DestroyEnemy()
     {
-        Destroy(gameObject);
+        headshotBox.gameObject.SetActive(false);
+        agent.isStopped = true;
+        agent.velocity = Vector3.zero;
+        enemyColl.isTrigger = true;
+        enemyColl.enabled = false;
+        instance.enabled = this;
     }
 
     void OnDrawGizmosSelected()

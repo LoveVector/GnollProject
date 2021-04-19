@@ -92,6 +92,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         speedlines = GameObject.Find("SpeedLines");
         speedlines.SetActive(false);
         // -------------------------------- Gaining Original Variables -----------------------
@@ -113,7 +114,6 @@ public class PlayerController : MonoBehaviour
         CheckIfGrounded();
         Jump();
         InputSlide();
-        StepClimb();
         CameraMoveTilt();
         //Debug.Log(rb.velocity);
     }
@@ -121,7 +121,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Movement();
-        //StepClimb();
+        StepClimb();
     }
 
     void Movement()

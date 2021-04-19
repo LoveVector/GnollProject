@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3039549108125131394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.179, z: 0}
+  m_LocalPosition: {x: -0.092, y: 0.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3039549108509719293}
@@ -42,8 +42,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.23304784, y: 0.16958106, z: 0.22642517}
-  m_Center: {x: -0.003937632, y: 0.011729062, z: -0.007709503}
+  m_Size: {x: 0.23304784, y: 0.18781361, z: 0.22642517}
+  m_Center: {x: -0.003937632, y: 0.020845335, z: -0.007709503}
 --- !u!1 &3039549108509719295
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 3039549108509719292}
   - component: {fileID: 3039549108509719282}
   - component: {fileID: 3039549108509719283}
+  - component: {fileID: -6262979440132592892}
   m_Layer: 0
   m_Name: DoomTarget
   m_TagString: Enemy
@@ -73,7 +74,7 @@ Transform:
   m_GameObject: {fileID: 3039549108509719295}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.177, z: -72.4}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 3039549108125131393}
   m_Father: {fileID: 0}
@@ -119,7 +120,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 600846730751016166, guid: 56504b2639330274f89af81d90a6a4d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1713fe0f82a490847bb900ab1c034f4c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -141,8 +142,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.41, y: 0.41239145, z: 0.2}
-  m_Center: {x: 0, y: -0.0788043, z: 0}
+  m_Size: {x: 0.41000003, y: 0.7056529, z: 0.20000002}
+  m_Center: {x: 0, y: -0.22543494, z: 0}
 --- !u!195 &3039549108509719282
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -162,7 +163,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.57
-  m_BaseOffset: 0.285
+  m_BaseOffset: 0.46
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &3039549108509719283
@@ -177,8 +178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d83a2016a9a590944ae3f83553b5ef74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAnim: {fileID: 0}
   agent: {fileID: 3039549108509719282}
-  player: {fileID: 0}
+  playerTransform: {fileID: 0}
   isPlayer:
     serializedVersion: 2
     m_Bits: 128
@@ -186,10 +188,31 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   walkPoint: {x: 0, y: 0, z: 0}
+  attackDamageMin: 18
+  attackDamageMax: 30
   walkPointRange: 5
   timeBetweenAttacks: 0.5
   sightRange: 20
   attackRange: 2
+  health: 50
   playerInSightRange: 0
   playerInAttackRange: 0
-  health: 50
+--- !u!95 &-6262979440132592892
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3039549108509719295}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ddf1b99b3a190f44f9abdac1f9b2ab7f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
