@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerDash : MonoBehaviour
 {
+    Camera playerCam;
     public bool isDashing;
 
     public float dashSpeed;
@@ -11,6 +12,13 @@ public class PlayerDash : MonoBehaviour
     public float timeForNextDash;
     public int dashAttempts;
     public int totalDash;
+    public float dashPrevFOV = 60;
+    public float dashFOV = 92;
+    public float originalDashFOVTime = 2;
+    public float dashFOVTime = 2;
+    public float fovSpeed = 1;
+
+    public float originalFOV;
 
     [SerializeField]float timeLeftCooldown;
     [SerializeField]float dashStartTime;
@@ -20,7 +28,10 @@ public class PlayerDash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerCam = GetComponentInChildren<Camera>();
         playerController = GetComponent<PlayerController>();
+
+        originalFOV = playerCam.fieldOfView;
     }
 
     // Update is called once per frame
@@ -28,6 +39,17 @@ public class PlayerDash : MonoBehaviour
     {
         HandleDash();
         DashCooldown();
+        DashFOVTime();
+        /*if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Debug.Log("This is happening");
+            playerCam.fieldOfView = Mathf.Lerp(playerCam.fieldOfView, dashFOV, fovSpeed * Time.deltaTime);
+            dashFOVTime =- Time.deltaTime;
+            if (dashFOVTime <= 0)
+            {
+                playerCam.fieldOfView = originalFOV;
+            }
+        }*/
     }
 
     void HandleDash()
@@ -67,6 +89,9 @@ public class PlayerDash : MonoBehaviour
 
     void OnStartDash()
     {
+        //playerCam.fieldOfView = dashFOV;
+        Debug.Log("This is happening");
+        playerCam.fieldOfView = Mathf.Lerp(dashPrevFOV, dashFOV, dashFOVTime * Time.time);
         isDashing = true;
         dashStartTime = Time.time;
         dashAttempts += 1;
@@ -89,6 +114,20 @@ public class PlayerDash : MonoBehaviour
             if(timeLeftCooldown <= 0)
             {
                 dashAttempts = 0;
+            }
+        }
+    }
+    void DashFOVTime()
+    {
+
+        if(playerCam.fieldOfView == dashFOV)
+        {
+            Debug.Log("DashFOVChanged");
+            dashFOVTime -= Time.deltaTime;
+            if(dashFOVTime <= 0)
+            {
+                playerCam.fieldOfView = originalFOV;
+                dashFOVTime = originalDashFOVTime;
             }
         }
     }

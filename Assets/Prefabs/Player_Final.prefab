@@ -551,6 +551,7 @@ GameObject:
   - component: {fileID: 5112271025512636124}
   - component: {fileID: 8840077413366311561}
   - component: {fileID: 8840077413366311563}
+  - component: {fileID: 1926127599214598524}
   m_Layer: 7
   m_Name: Player_Final
   m_TagString: Player
@@ -626,11 +627,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDashing: 0
-  dashSpeed: 1000
+  dashSpeed: 800
   dashCooldown: 2.5
   timeForNextDash: 0
   dashAttempts: 0
   totalDash: 2
+  dashPrevFOV: 60
+  dashFOV: 69
+  originalDashFOVTime: 0.2
+  dashFOVTime: 0.2
+  fovSpeed: 20
+  originalFOV: 0
   timeLeftCooldown: 0
   dashStartTime: 0
 --- !u!54 &8840077413366311561
@@ -663,6 +670,19 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: -0.36777377, z: 0}
+--- !u!65 &1926127599214598524
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8840077413366311560}
+  m_Material: {fileID: 13400000, guid: adc4d5802301ab04587706fc0b87abed, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1637574, y: 1.5669906, z: 1}
+  m_Center: {x: 0.014433205, y: 0.59, z: 1.6936371e-17}
 --- !u!1 &8840077413454653701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,7 +1114,7 @@ Camera:
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!81 &8840077413721947942
@@ -2029,7 +2049,7 @@ MonoBehaviour:
   maxAmmo: 100
   bulletsShot: 5
   headshotMultiplier: 2
-  fireRate: 2
+  fireRate: 1
   spread: 0.1
   range: 100
   allowButtonHold: 0
@@ -2143,6 +2163,8 @@ GameObject:
   - component: {fileID: 8840077414861857538}
   - component: {fileID: 8840077414861857548}
   - component: {fileID: 8840077414861857539}
+  - component: {fileID: 2635222989278772959}
+  - component: {fileID: 4738151244008994835}
   m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
@@ -2208,6 +2230,38 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &2635222989278772959
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8840077414861857537}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a2e0dc7a6ca253840b7b22f1993aa7dc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4738151244008994835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8840077414861857537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6580e7ebcf819f140a409bd7900ab000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerVal: {fileID: 8840077413366311562}
 --- !u!1 &8840077414921954715
 GameObject:
   m_ObjectHideFlags: 0

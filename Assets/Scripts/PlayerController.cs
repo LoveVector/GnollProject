@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour
             horizontalMovement = horizontalMovement.normalized * maxSpeed;
         }
 
-        Debug.Log(slopeHit.normal);
+        //Debug.Log(slopeHit.normal);
 
         rb.velocity = new Vector3(horizontalMovement.x, rb.velocity.y, horizontalMovement.y);
         Vector3 speedMovement = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, 0, Input.GetAxis("Vertical") * moveSpeed);
