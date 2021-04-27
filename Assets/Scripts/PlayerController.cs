@@ -29,8 +29,11 @@ public class PlayerController : MonoBehaviour
     public float slideUnlocked = 1;
     public float cameraTilt = 1;
 
-    public int currentHealth;
+    [SerializeField]public const float overHealDecay = 1.4f;
+
+    public float currentHealth;
     public int maxHealth = 100;
+    public int overHealMax = 150;
 
     public Vector3 bodyReducedSize;
 
@@ -115,6 +118,7 @@ public class PlayerController : MonoBehaviour
         Jump();
         InputSlide();
         CameraMoveTilt();
+        MaxHealthCheck();
         //Debug.Log(rb.velocity);
     }
 
@@ -324,6 +328,18 @@ public class PlayerController : MonoBehaviour
                 rb.position -= new Vector3(0f, -stepSmooth, 0f);
             }
         }
+    }
+
+    void MaxHealthCheck()
+    {
+        if(currentHealth > maxHealth)
+        {
+            currentHealth -= overHealDecay * Time.deltaTime; 
+        }
+        if (currentHealth > overHealMax)
+        {
+            currentHealth = overHealMax;
+        }    
     }
 
     private bool OnSlope()

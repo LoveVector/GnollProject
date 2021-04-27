@@ -16,6 +16,6 @@ public class HealthIndicator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        heartAnim.SetInteger("Health", playerVal.currentHealth);
+        heartAnim.SetFloat("Health", playerVal.currentHealth);
     }
 }

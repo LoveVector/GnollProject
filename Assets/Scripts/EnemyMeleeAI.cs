@@ -18,6 +18,9 @@ public class EnemyMeleeAI : MonoBehaviour
     public NavMeshAgent agent;
 
     public Transform playerTransform;
+    public Transform dropPoint;
+
+    public GameObject[] drops;
 
     public LayerMask isPlayer;
     public LayerMask isGround;
@@ -33,6 +36,7 @@ public class EnemyMeleeAI : MonoBehaviour
     public float attackRange;
     public float health;
 
+    public bool thisDrops;
     public bool playerInSightRange;
     public bool playerInAttackRange;
 
@@ -44,7 +48,9 @@ public class EnemyMeleeAI : MonoBehaviour
     void Awake()
     {
         instance = this;
+        thisDrops = (Random.value > 0.5f); // Randomizes Drops
         enemyColl = GetComponent<Collider>();
+        dropPoint = gameObject.transform.GetChild(1).transform;
         playerTransform = GameObject.Find("Player").transform;
         enemyAnim = GetComponent<Animator>();
         player = FindObjectOfType<PlayerController>();
@@ -152,6 +158,10 @@ public class EnemyMeleeAI : MonoBehaviour
 
     void DestroyEnemy()
     {
+        if(thisDrops)
+        {
+            Instantiate(drops[Random.Range(0 , drops.Length)], dropPoint.position, dropPoint.rotation);
+        }
         headshotBox.gameObject.SetActive(false);
         agent.isStopped = true;
         agent.velocity = Vector3.zero;

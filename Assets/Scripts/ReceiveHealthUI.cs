@@ -16,6 +16,6 @@ public class ReceiveHealthUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthText.text = player.currentHealth.ToString() + "%";
+        healthText.text = player.currentHealth.ToString("F0") + "%";
     }
 }
