@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody rb;
 
+    public Animator redVignette;
+
     public float cameraReducedHeight;
     public float feetReducedHeight;
     public float moveSpeed = 1f; 
@@ -117,15 +119,20 @@ public class PlayerController : MonoBehaviour
         CheckIfGrounded();
         Jump();
         InputSlide();
-        CameraMoveTilt();
         MaxHealthCheck();
+        Die();
         //Debug.Log(rb.velocity);
     }
 
-    private void FixedUpdate()
+    void LateUpdate()
+    {
+        CameraMoveTilt();
+    }
+
+    void FixedUpdate()
     {
         Movement();
-        StepClimb();
+        //StepClimb();
     }
 
     void Movement()
@@ -150,7 +157,7 @@ public class PlayerController : MonoBehaviour
         {
             speedMovement = transform.TransformDirection(speedMovement);
             speedMovement = Vector3.ProjectOnPlane(speedMovement, -slopeHit.normal);
-            speedMovement = speedMovement.normalized * (moveSpeed * 1.2f);
+            speedMovement = speedMovement.normalized * (moveSpeed * 1.5f);
             rb.AddForce(speedMovement);
         }
         Debug.DrawRay(transform.position, speedMovement);
@@ -378,10 +385,18 @@ public class PlayerController : MonoBehaviour
     public void TakeDamagePlayer(int damage)
     {
         currentHealth -= damage;
+        redVignette.SetTrigger("gotHit");
     }
 
     void Die()
     {
-        // Die Function
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            playerCamera.GetComponent<Animator>().SetTrigger("Death");
+            GameObject.Find("Death Screen").gameObject.GetComponent<Animator>().SetTrigger("DeathFinish");
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+        }
     }
 }

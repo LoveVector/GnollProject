@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerDash : MonoBehaviour
 {
     Camera playerCam;
+    Animator camAnim;
     public bool isDashing;
 
     public float dashSpeed;
@@ -30,7 +31,7 @@ public class PlayerDash : MonoBehaviour
     {
         playerCam = GetComponentInChildren<Camera>();
         playerController = GetComponent<PlayerController>();
-
+        camAnim = GameObject.Find("Main Camera").gameObject.GetComponent<Animator>();
         originalFOV = playerCam.fieldOfView;
     }
 
@@ -39,17 +40,7 @@ public class PlayerDash : MonoBehaviour
     {
         HandleDash();
         DashCooldown();
-        DashFOVTime();
-        /*if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            Debug.Log("This is happening");
-            playerCam.fieldOfView = Mathf.Lerp(playerCam.fieldOfView, dashFOV, fovSpeed * Time.deltaTime);
-            dashFOVTime =- Time.deltaTime;
-            if (dashFOVTime <= 0)
-            {
-                playerCam.fieldOfView = originalFOV;
-            }
-        }*/
+        //DashFOVTime();
     }
 
     void HandleDash()
@@ -89,9 +80,7 @@ public class PlayerDash : MonoBehaviour
 
     void OnStartDash()
     {
-        //playerCam.fieldOfView = dashFOV;
-        Debug.Log("This is happening");
-        playerCam.fieldOfView = Mathf.Lerp(dashPrevFOV, dashFOV, dashFOVTime * Time.time);
+        camAnim.SetTrigger("Dash");
         isDashing = true;
         dashStartTime = Time.time;
         dashAttempts += 1;
