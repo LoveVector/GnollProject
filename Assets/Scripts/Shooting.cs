@@ -6,6 +6,7 @@ public class Shooting : MonoBehaviour
 {
     public Animator gunAnim;
     public GameObject bulletImpact;
+    public AudioManager audioManager;
 
     public int damage;
     public int currentAmmo = 50;
@@ -18,6 +19,9 @@ public class Shooting : MonoBehaviour
     public float range;
 
     public bool allowButtonHold;
+    public bool isShotgun;
+    public bool isRevolver;
+    public bool isSubMachineGun;
 
     public LayerMask isEnemy;
 
@@ -30,6 +34,7 @@ public class Shooting : MonoBehaviour
 
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         player = GetComponentInParent<PlayerController>();
         gunAnim = GetComponent<Animator>();
     }
@@ -47,6 +52,10 @@ public class Shooting : MonoBehaviour
     {
         if (allowButtonHold)
         {
+            if (isSubMachineGun)
+            {
+                //Coming Soon
+            }
             shooting = Input.GetKey(KeyCode.Mouse0);
         }
         else
@@ -58,10 +67,20 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
+
         if (Time.time > fireRateTime)
         {
             if (shooting && currentAmmo > 0)
             {
+                    if (isRevolver)
+                    {
+                        isRevolver = true;
+                        audioManager.Play("RevolverFire");
+                    }
+                    else if (isShotgun)
+                    {
+                        audioManager.Play("ShotgunFire");
+                    }
                 for (int i = 0; i < bulletsShot; i++)
                 {
                     float x = Random.Range(-spread, spread);

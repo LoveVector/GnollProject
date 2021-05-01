@@ -9,9 +9,11 @@ public class AmmoPickup : MonoBehaviour
     public int ammoMax = 30;
     public Shooting shootingSc;
     public Animator AmmoUIAnim;
+    public AudioManager audioManager;
 
     private void Awake()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         AmmoUIAnim = GameObject.Find("AmmoVig").GetComponent<Animator>();
     }
 
@@ -20,6 +22,7 @@ public class AmmoPickup : MonoBehaviour
         shootingSc = other.GetComponentInChildren<Shooting>();
         if(other.tag == "Player")
         {
+            audioManager.Play("AmmoPickup");
             AmmoUIAnim.SetTrigger("getAmmo");
             ammoAmount = Random.Range(ammoMin, ammoMax);
             shootingSc.currentAmmo += ammoAmount;

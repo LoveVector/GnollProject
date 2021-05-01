@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
 
+    public AudioManager audioManager;
+
     public Camera playerCamera;
 
     public Rigidbody rb;
@@ -89,6 +91,7 @@ public class PlayerController : MonoBehaviour
         playerCamera = GetComponentInChildren<Camera>();
         feetCollider = GetComponent<CapsuleCollider>();
         bodyCollider = GetComponentInChildren<BoxCollider>();
+        audioManager = FindObjectOfType<AudioManager>();
 
         stepRayHigh.transform.position = new Vector3(stepRayHigh.transform.position.x, stepHeight, stepRayHigh.transform.position.z); 
     }
@@ -218,6 +221,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            audioManager.Play("PlayerJump");
         }
         if(!isGrounded && rb.velocity.y <= fallSpeedThreshold)
         {
@@ -266,7 +270,7 @@ public class PlayerController : MonoBehaviour
 
     void Sliding()
     {
-
+        audioManager.Play("Sliding");
         playerCamera.transform.localPosition = Vector3.up * cameraReducedHeight;
         feetCollider.height = feetReducedHeight;
         bodyCollider.size = bodyReducedSize;
@@ -373,6 +377,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("You hit a Wall");
             if (Input.GetButton("Jump") && !isGrounded)
             {
+                audioManager.Play("WallJumped");
                 var speed = lastVelocity.magnitude;
                 var direction = Vector3.Reflect(lastVelocity.normalized + new Vector3(0, wallJumpHeightGain, 0), hit.contacts[0].normal);
 

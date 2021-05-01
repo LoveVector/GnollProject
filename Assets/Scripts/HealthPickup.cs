@@ -9,9 +9,11 @@ public class HealthPickup : MonoBehaviour
     public int healMax = 15;
     public PlayerController playerSc;
     public Animator UIAnimate;
+    public AudioManager audioManager;
 
     private void Awake()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         UIAnimate = GameObject.Find("HealVig").GetComponent<Animator>();
     }
 
@@ -20,6 +22,7 @@ public class HealthPickup : MonoBehaviour
         playerSc = FindObjectOfType<PlayerController>();
         if (other.tag == "Player")
         {
+            audioManager.Play("Heal");
             UIAnimate.SetTrigger("getHealed");
             healAmount = Random.Range(healMin, healMax);
             playerSc.currentHealth += healAmount;

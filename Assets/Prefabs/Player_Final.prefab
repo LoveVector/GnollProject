@@ -208,8 +208,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.3363037, y: -3.252201}
+  m_SizeDelta: {x: -1.3453, y: 13.0087}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8852898879886997203
 CanvasRenderer:
@@ -1924,6 +1924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec4da6998a64adc43b7a9dcd4a7d63ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
   playerCamera: {fileID: 0}
   rb: {fileID: 0}
   redVignette: {fileID: 8840798386518830489}
@@ -3132,6 +3133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunAnim: {fileID: 0}
   bulletImpact: {fileID: 8377981015785097955, guid: b42fa34c05db37140a9ebeeb03c73211, type: 3}
+  audioManager: {fileID: 0}
   damage: 25
   currentAmmo: 40
   maxAmmo: 100
@@ -3141,6 +3143,9 @@ MonoBehaviour:
   spread: 0
   range: 1000
   allowButtonHold: 0
+  isShotgun: 0
+  isRevolver: 1
+  isSubMachineGun: 0
   isEnemy:
     serializedVersion: 2
     m_Bits: 0
@@ -3453,6 +3458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gunAnim: {fileID: 0}
   bulletImpact: {fileID: 8377981015785097955, guid: b42fa34c05db37140a9ebeeb03c73211, type: 3}
+  audioManager: {fileID: 0}
   damage: 20
   currentAmmo: 90
   maxAmmo: 100
@@ -3462,6 +3468,9 @@ MonoBehaviour:
   spread: 0.1
   range: 100
   allowButtonHold: 0
+  isShotgun: 1
+  isRevolver: 0
+  isSubMachineGun: 0
   isEnemy:
     serializedVersion: 2
     m_Bits: 0

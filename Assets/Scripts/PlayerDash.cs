@@ -6,6 +6,8 @@ public class PlayerDash : MonoBehaviour
 {
     Camera playerCam;
     Animator camAnim;
+
+    public AudioManager audioManager;
     public bool isDashing;
 
     public float dashSpeed;
@@ -29,6 +31,7 @@ public class PlayerDash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
         playerCam = GetComponentInChildren<Camera>();
         playerController = GetComponent<PlayerController>();
         camAnim = GameObject.Find("Main Camera").gameObject.GetComponent<Animator>();
@@ -80,6 +83,7 @@ public class PlayerDash : MonoBehaviour
 
     void OnStartDash()
     {
+        audioManager.Play("Dashing");
         camAnim.SetTrigger("Dash");
         isDashing = true;
         dashStartTime = Time.time;

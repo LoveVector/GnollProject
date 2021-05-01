@@ -13,6 +13,10 @@ public class EnemyMeleeAI : MonoBehaviour
 
     Transform headshotBox;
 
+    AudioSource thisAudio;
+
+    AudioManager audioManager;
+
     public Animator enemyAnim;
 
     public NavMeshAgent agent;
@@ -47,6 +51,8 @@ public class EnemyMeleeAI : MonoBehaviour
 
     void Awake()
     {
+        audioManager = FindObjectOfType<AudioManager>();
+        thisAudio = GetComponent<AudioSource>();
         instance = this;
         thisDrops = (Random.value > 0.5f); // Randomizes Drops
         enemyColl = GetComponent<Collider>();
@@ -126,9 +132,7 @@ public class EnemyMeleeAI : MonoBehaviour
 
         if (!alreadyAttacked)
         {
-            // Play Animation ( animation frame add damage )
             enemyAnim.SetBool("isAttacking", true);
-            // Attacking
             Debug.Log("Attacked");
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
@@ -137,6 +141,7 @@ public class EnemyMeleeAI : MonoBehaviour
 
     void DamagePlayer()
     {
+        audioManager.Play("PlayerDamage");
         attackDamageValue = Random.Range(attackDamageMin, attackDamageMax);
         player.TakeDamagePlayer(attackDamageValue);
     }
@@ -162,6 +167,7 @@ public class EnemyMeleeAI : MonoBehaviour
         {
             Instantiate(drops[Random.Range(0 , drops.Length)], dropPoint.position, dropPoint.rotation);
         }
+        thisAudio.Stop();
         headshotBox.gameObject.SetActive(false);
         agent.isStopped = true;
         agent.velocity = Vector3.zero;

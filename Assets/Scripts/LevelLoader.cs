@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
+    public bool menu;
 
     public float transitionTime = 1f;
 
@@ -24,7 +25,14 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        if (!menu)
+        {
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        }
+        if (menu)
+        {
+            StartCoroutine(LoadLevel(0));
+        }
     }
 
     IEnumerator LoadLevel(int levelIndex)
