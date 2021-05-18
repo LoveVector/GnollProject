@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &141614427220521114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 141614427220521112}
+  - component: {fileID: 141614427220521115}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &141614427220521112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141614427220521114}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 318.52643, y: 353.43674, z: -3.8524475}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &141614427220521115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141614427220521114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32a53af4bd6812d41945ad3647ad2b27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - source: {fileID: 0}
+    name: PlayerJump
+    clip: {fileID: 8300000, guid: 600390c0971174c408f2130da43455fc, type: 3}
+    volume: 0.398
+    pitch: 0.95
+    loop: 0
+  - source: {fileID: 0}
+    name: ShotgunFire
+    clip: {fileID: 8300000, guid: 5448bb006abef0c44b8df65935e3f87c, type: 3}
+    volume: 0.314
+    pitch: 0.95
+    loop: 0
+  - source: {fileID: 0}
+    name: RevolverFire
+    clip: {fileID: 8300000, guid: 2291ededf0c3304439cd7bdd5b21c200, type: 3}
+    volume: 0.501
+    pitch: 0.95
+    loop: 0
+  - source: {fileID: 0}
+    name: Sliding
+    clip: {fileID: 8300000, guid: 2e0934a0b6b7ae847bed4cc49a1733a2, type: 3}
+    volume: 0.86
+    pitch: 1.46
+    loop: 0
+  - source: {fileID: 0}
+    name: Dashing
+    clip: {fileID: 8300000, guid: 67303b1d571c5e54380c78be6dcf3ba6, type: 3}
+    volume: 0.86
+    pitch: 2.57
+    loop: 0
+  - source: {fileID: 0}
+    name: Heal
+    clip: {fileID: 8300000, guid: 0f6498f3e1ddfd34fbbc5021c0754864, type: 3}
+    volume: 0.6
+    pitch: 0.88
+    loop: 0
+  - source: {fileID: 0}
+    name: AmmoPickup
+    clip: {fileID: 8300000, guid: 0c4133df9307e704e96a6f554cc4bcd2, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+  - source: {fileID: 0}
+    name: PlayerDamage
+    clip: {fileID: 8300000, guid: 27e46c5b4fb0e1f43b2ee5565dc892e7, type: 3}
+    volume: 1
+    pitch: 0.8
+    loop: 0
+  - source: {fileID: 0}
+    name: WallJumped
+    clip: {fileID: 8300000, guid: d4b1360365e46fd43a4fc3877591204e, type: 3}
+    volume: 0.3
+    pitch: 0.75
+    loop: 0
