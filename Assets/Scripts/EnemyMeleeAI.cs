@@ -33,6 +33,7 @@ public class EnemyMeleeAI : MonoBehaviour
 
     public int attackDamageMin;
     public int attackDamageMax;
+    public int attackDamageValue;
 
     public float walkPointRange;
     public float timeBetweenAttacks;
@@ -43,8 +44,9 @@ public class EnemyMeleeAI : MonoBehaviour
     public bool thisDrops;
     public bool playerInSightRange;
     public bool playerInAttackRange;
+    public bool isSoldier;
 
-    int attackDamageValue;
+    public GameObject soldierBullet;
 
     bool alreadyAttacked;
     bool walkPointSet;
@@ -144,6 +146,11 @@ public class EnemyMeleeAI : MonoBehaviour
         audioManager.Play("PlayerDamage");
         attackDamageValue = Random.Range(attackDamageMin, attackDamageMax);
         player.TakeDamagePlayer(attackDamageValue);
+    }
+
+    void DamagePlayerSoldier()
+    {
+        Instantiate(soldierBullet, gameObject.transform);
     }
 
     void ResetAttack()

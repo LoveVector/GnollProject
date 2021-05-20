@@ -54,7 +54,7 @@ public class Shooting : MonoBehaviour
         {
             if (isSubMachineGun)
             {
-                //Coming Soon
+                isSubMachineGun = true;
             }
             shooting = Input.GetKey(KeyCode.Mouse0);
         }
@@ -72,15 +72,20 @@ public class Shooting : MonoBehaviour
         {
             if (shooting && currentAmmo > 0)
             {
-                    if (isRevolver)
-                    {
-                        isRevolver = true;
-                        audioManager.Play("RevolverFire");
-                    }
-                    else if (isShotgun)
-                    {
-                        audioManager.Play("ShotgunFire");
-                    }
+                if (isRevolver)
+                {
+                    isRevolver = true;
+                    audioManager.Play("RevolverFire");
+                }
+                else if (isShotgun)
+                {
+                    audioManager.Play("ShotgunFire");
+                }
+                else if (isSubMachineGun)
+                {
+                    audioManager.Play("SubmachineFire");
+                }
+
                 for (int i = 0; i < bulletsShot; i++)
                 {
                     float x = Random.Range(-spread, spread);

@@ -14,14 +14,19 @@ public class ReceiveUIAmmo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        shootAmmo = GetComponentInParent<Shooting>();
+        shootAmmo = FindObjectOfType<Shooting>();
         ammoText = GetComponent<Text>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isShotgun)
+        if(shootAmmo.gameObject.activeInHierarchy == false)
+        {
+            Debug.Log("AmmoChanged");
+            shootAmmo = FindObjectOfType<Shooting>();
+        }
+        if (shootAmmo.isShotgun)
         {
             shotgunAmmoValue = shootAmmo.currentAmmo / shootAmmo.bulletsShot;
             ammoText.text = shotgunAmmoValue.ToString();

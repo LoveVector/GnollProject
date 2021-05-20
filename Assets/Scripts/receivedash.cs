@@ -16,6 +16,6 @@ public class receivedash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dashText.text = dash.dashAttempts.ToString() + " /3";
+        dashText.text = dash.dashAttempts.ToString();
     }
 }
