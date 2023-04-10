@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -44,6 +45,7 @@ public class PlayerController : MonoBehaviour
     bool isGrounded;
     bool isOnWall;
     bool alreadySlid;
+    bool movementPressed;
 
     GameObject stepRayHigh;
     GameObject stepRayLow;
@@ -80,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;                                    // Singleton
+        instance = this;  // Singleton
         currentHealth = maxHealth;
 
         rb = GetComponent<Rigidbody>();
@@ -103,6 +105,10 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         speedlines = GameObject.Find("SpeedLines");
         speedlines.SetActive(false);
+        movementPressed = isGrounded && !Input.GetKey(KeyCode.W)
+                                     && !Input.GetKey(KeyCode.A)
+                                     && !Input.GetKey(KeyCode.S)
+                                     && !Input.GetKey(KeyCode.D);
         // -------------------------------- Gaining Original Variables -----------------------
         originalMass = rb.mass;
         originalAngularDrag = rb.angularDrag;
@@ -143,6 +149,7 @@ public class PlayerController : MonoBehaviour
         Vector2 horizontalMovement = new Vector2(rb.velocity.x, rb.velocity.z);
         if (horizontalMovement.magnitude > maxSpeed)
         {
+            Debug.Log("Movement Clamped");
             horizontalMovement = horizontalMovement.normalized * maxSpeed;
         }
 
@@ -150,6 +157,16 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = new Vector3(horizontalMovement.x, rb.velocity.y, horizontalMovement.y);
         Vector3 speedMovement = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, 0, Input.GetAxis("Vertical") * moveSpeed);
+
+        if (movementPressed)
+        {
+            rb.drag = 15;
+
+        }
+        else 
+        {
+            rb.drag = originalDrag;
+        }
 
         if (!OnSlope())
         {
